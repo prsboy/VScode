@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/Users/junkykim/Desktop/VScode/build",
+  "command": "/usr/bin/clang++  -isystem /usr/local/Cellar/opencv/4.5.0_5/include/opencv4 -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -std=gnu++11 -o CMakeFiles/startProject.dir/test.cpp.o -c /Users/junkykim/Desktop/VScode/test.cpp",
+  "file": "/Users/junkykim/Desktop/VScode/test.cpp"
+}
+]
