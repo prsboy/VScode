@@ -14,7 +14,7 @@
             "cwd": "${workspaceFolder}",
             "osx": {
                 "MIMode": "lldb",
-                "environment": [{"name": "DYLD_LIBRATY_PATH","value": "/usr/local/Cellar/opencv/4.5.0_5/lib"}],
+                "environment": [{"name": "DYLD_LIBRATY_PATH","value": "/usr/local/Cellar/opencv/4.5.1_2/lib"}],
             },
             "externalConsole": false,
             "MIMode": "lldb"
