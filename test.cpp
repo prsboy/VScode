@@ -1,33 +1,24 @@
 #include <opencv2/opencv.hpp>
-#include <opencv2/highgui.hpp>
 #include <iostream>
 
 using namespace std;
 using namespace cv;
 
-int main(int, char**)
+int main()
 {
-    VideoCapture cap;
-    cap.open(1200);
+    cout<<"Hello OpenCV"<<CV_VERSION<<endl;    
 
-    if(!cap.isOpened())     
+    Mat img;
+    img = imread("lenna.bmp");
+
+    if(img.empty())
     {
-        cout<<"Can't open the camera"<<endl;
+        cout<<"Image load failed!"<<endl;
         return -1;
     }
 
-    Mat f;
-    namedWindow("w",1);
+    namedWindow("image");
+    imshow("image", img);
 
-    while(true)
-    {
-        cap>>f;
-
-        imshow("w",1);
-
-        if(waitKey(100) > 0)
-            break;
-    }
-
-    return 0;
+    waitKey();
 }
