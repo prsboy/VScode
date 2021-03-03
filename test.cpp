@@ -18,7 +18,7 @@ int main()
     }
 
     namedWindow("image");
-    imshow("image", img);
+    imshow("image", ~img);
 
     waitKey();
 }
