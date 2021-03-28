@@ -6,24 +6,23 @@ using namespace cv;
 
 int main()
 {
-    Mat img1 = imread("dog.bmp");
+    Mat img1 = imread("cat.bmp");
 
-    Mat img2 = img1;
-    Mat img3;
-    img3 = img1;
+    if(img1.empty())
+    {
+        cerr<<"Image load failed"<<endl;
+        return -1;
+    }
 
-    Mat img4 = img1.clone();
-    Mat img5;
-    img1.copyTo(img5);
+    Mat img2 = img1(Rect(220, 120, 340, 240));
+    Mat img3 = img1(Rect(220, 120, 340, 240)).clone();
 
-    img1.setTo(Scalar(0, 255, 255));    // Yellow
+    img2 = ~img2;
 
     imshow("img1", img1);
     imshow("img2", img2);
     imshow("img3", img3);
-    imshow("img4", img4);
-    imshow("img5", img5);
-    
+
     waitKey();
     destroyAllWindows();
 }
