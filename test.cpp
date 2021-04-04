@@ -1,27 +1,33 @@
 #include <opencv2/opencv.hpp>
+#include <vector>
 #include <iostream>
+
 
 using namespace std;
 using namespace cv;
 
+void printMat(InputArray _mat)
+{
+    Mat mat = _mat.getMat();
+    cout<<mat<<endl;
+}
+
+void InputArrayOp()
+{
+    uchar data[] = {1,2,3,4,5,6};
+    Mat mat1(2,3,CV_8U, data);
+    printMat(mat1);
+
+    vector<float> vec1 = {1.2f, 3.4f, -2.1f};
+    printMat(vec1);
+}
+
+
+
+
 int main()
 {
-    Mat img1 = imread("cat.bmp");
-
-    if(img1.empty())
-    {
-        cerr<<"Image load failed"<<endl;
-        return -1;
-    }
-
-    Mat img2 = img1(Rect(220, 120, 340, 240));
-    Mat img3 = img1(Rect(220, 120, 340, 240)).clone();
-
-    img2 = ~img2;
-
-    imshow("img1", img1);
-    imshow("img2", img2);
-    imshow("img3", img3);
+    InputArrayOp();
 
     waitKey();
     destroyAllWindows();
