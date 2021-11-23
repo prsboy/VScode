@@ -10,8 +10,8 @@
             "args": [
                 "-std=c++17",
                 "-stdlib=libc++",
-                "-I/usr/local/Cellar/opencv/4.5.1_2/include/opencv4/",
-                "-L/usr/local/Cellar/opencv/4.5.1_2/lib",
+                "-I/usr/local/Cellar/opencv/4.5.3_2/include/opencv4/",
+                "-L/usr/local/Cellar/opencv/4.5.3_2/lib",
                 "-lopencv_highgui",
                 "-lopencv_core",
                 "-lopencv_imgcodecs",
